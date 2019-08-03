@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/edit_team/edit_team",
+    "pages/team_integral/team_integral",
+    "pages/team_list/team_list",
+    "pages/team_history/team_history",
+    "pages/team_share/team_share",
+    "pages/advice/advice"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "斗地主计分",
+    "navigationBarTextStyle": "black"
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx816769dd39e0078a"
+  ]
+}

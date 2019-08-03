@@ -1,0 +1,66 @@
+<view wx:if='{{erweima}}'>
+  <div wx:if='{{Tijiao}}' class="header row">
+    <div class="title">加入房间</div>
+  </div>
+
+  <div wx:if='{{Tijiao}}' class="join row">
+
+    <div class="row scan">
+      <view bindtap='scanCode' class="link">
+        <div class="qrcode" style='background: url(../../img/scan.png) right center no-repeat; background-size: 20px 20px;'>扫一扫二维码加入房间</div>
+      </view>
+    </div>
+    <form catchsubmit="formSubmit">
+      <div class="item">
+        <div class="form-group">
+          <div class="box">
+            <div class="input-box">
+              <input name='team_name' value='{{sharename}}' type="text" placeholder="请输入房间号" />
+            </div>
+          </div>
+          <div class="box">
+            <button form-type='submit' class="btn btn-primary">提交</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</view>
+
+<div wx:if='{{logs.jieguo==1}}' class="header row">
+  <div wx:if='{{manuyan}}' class="title">绑定称呼</div>
+</div>
+
+<div wx:if='{{logs.jieguo==1}}' class="binding row">
+  <div wx:if='{{manuyan}}' class="content">
+    加入房间：{{teamName}}
+  </div>
+  <div wx:if='{{manuyan}}' class="form-group">
+    <form catchsubmit="chooes">
+      <div class="box">
+        <div class="name">选择您的称呼：</div>
+        <radio-group name="radio">
+          <label>
+            <div wx:for='{{logs.Name}}' class="item">
+              <div class="left">
+                <text>{{item.player_name}}</text>
+              </div>
+              <div class="right">
+                <radio value="{{item.Id}}" />
+              </div>
+            </div>
+          </label>
+        </radio-group>
+      </div>
+      <div class="box">
+        <button formType="submit" class="btn btn-primary">提交</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div wx:if='{{logs.jieguo==2}}' class="header row">
+  <div class="title">您已经绑定过该房间，请在历史对局中查看</div>
+</div>
+<div wx:if='{{logs.jieguo==1}}' class="header row">
+  <div wx:if='{{manuyan1}}' class="title">我很抱歉，该房间已经坐满了人</div>
+</div>

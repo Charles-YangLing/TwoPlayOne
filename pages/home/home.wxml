@@ -1,0 +1,19 @@
+<!--pages/home/home.wxml-->
+<div class="section">
+  <div class="subject">
+    <image mode='widthFix' src="../../img/doudizhu.png" />
+  </div>
+  <div class="btn-game">
+    <a class="btn">
+      <image bindtap='{{option}}' mode='widthFix' src="../../img/btn_start.png" />
+    </a>
+    <a class="btn">
+      <image bindtap='Toteam_history_option' mode='widthFix' src="../../img/btn_history.png" />
+    </a>
+  </div>
+  <div class="outlink">
+    <a>
+      <image bindtap='ToSan' src="../../img/go_3da1.png" mode='widthFix'/>
+    </a>
+  </div>
+</div>

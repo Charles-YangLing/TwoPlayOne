@@ -1,0 +1,12 @@
+<div class="share container row">
+  <div class="title">房间号：{{house_name}}</div>
+  <div class="qrcode">
+    <image mode='widthFix' bindtap="previewImage" src='{{QRImage}}' />
+  </div>
+
+  <div class="prompt">
+    邀请好友使用微信扫一扫加入房间。
+    <br /> 或在小程序中择加入房间输入房间号。
+  </div>
+
+</div>

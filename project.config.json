@@ -1,0 +1,72 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.3.0",
+	"appid": "wx1b0281aedea60ec2",
+	"projectname": "%E6%96%97%E5%9C%B0%E4%B8%BB%E8%AE%B0%E5%88%86%E7%89%8C",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{
+					"id": 0,
+					"name": "扫描二维码",
+					"pathName": "pages/team_list/team_list",
+					"query": "scene=11021624747",
+					"scene": "1047"
+				},
+				{
+					"id": 1,
+					"name": "编辑",
+					"pathName": "pages/team_integral/team_integral",
+					"query": "Id=11140948616",
+					"scene": "1047"
+				},
+				{
+					"id": 2,
+					"name": "加入房间",
+					"pathName": "pages/team_list/team_list",
+					"query": "",
+					"scene": "1047"
+				},
+				{
+					"id": 3,
+					"name": "显示",
+					"pathName": "pages/edit_team/edit_team",
+					"query": "",
+					"scene": "1047"
+				}
+			]
+		}
+	}
+}

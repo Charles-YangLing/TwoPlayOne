@@ -1,0 +1,113 @@
+<!--pages/team_integral/team_integral.wxml-->
+<div class="header row">
+  <div class="title">房间号：{{logs.team_name}}</div>
+  <a bindtap='share' id='{{Id}}' wx:if="{{logs.Er_house[0].overstatus}}" class="link">
+    <image src="../../img/qrcode.png" class="qrcode" />邀请队友</a>
+</div>
+
+<div class="scoring row">
+
+  <div class="table">
+    <div class="tr">
+      <div class="th">玩家</div>
+      <div class="th {{userA}}">{{player1name}}</div>
+      <div class="th {{userB}}">{{player2name}}</div>
+      <div class="th {{userC}}">{{player3name}}</div>
+    </div>
+    <div class="tr total">
+      <div class="td">总分</div>
+      <div class="td">{{logs.player1_Toatal}}</div>
+      <div class="td">{{logs.player2_Toatal}}</div>
+      <div class="td">{{logs.player3_Toatal}}</div>
+    </div>
+    <div wx:for="{{list}}" class="tr">
+      <div class="td grey">第{{jushu[index]}}局</div>
+      <div class="td">{{player1_Lishi[index].player_score}}</div>
+      <div class="td">{{player2_Lishi[index].player_score}}</div>
+      <div class="td">{{player3_Lishi[index].player_score}}</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div wx:if="{{logs.fangzhu}}" class="box">
+      <button bindtap='gameover' wx:if="{{logs.Er_house[0].overstatus}}" id='{{Id}}' class="btn btn-danger">结束游戏</button>
+    </div>
+    <div wx:if="{{logs.fangzhu}}" class="box">
+      <button bindtap='Tianjia' wx:if="{{logs.Er_house[0].overstatus}}" id="btnAddAcore" class="btn btn-primary">添加得分</button>
+    </div>
+    <div wx:if="{{logs.fangzhu==false}}">
+      <div wx:if="{{logs.Er_house[0].overstatus==true}}" class="box">
+        <button wx:if='{{player==false}}' bindtap='ToEndHouse' id='{{Id}}' class="btn btn-danger">退出房间</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="pop" style="display:{{Xianshi}};" id="popAddAcore">
+  <form bindsubmit="formSubmit">
+    <div class="pop-content">
+      <div class="pop-header">
+        添加得分
+        <a id="popclose" bindtap='CloseTianjia'></a>
+        <!-- <a  id="popclose" style='' ></a> -->
+      </div>
+      <div class="pop-body">
+        <div class="table">
+          <div class="tr">
+            <div class="td td-1 grey">玩家</div>
+            <div class="td td-2 grey">负</div>
+            <div class="td td-3 grey">得分</div>
+          </div>
+          <radio-group name="checkbox">
+            <div class="tr">
+              <div class="td td-1 black">{{player1name}}</div>
+              <div class="td td-2">
+                <label>
+                  <radio value="1" checked='{{ischecked}}'/>
+                </label>
+              </div>
+              <div class="td td-3">
+                <input name='player1_integral' value='{{chushi}}' type="number" class="input" />
+              </div>
+            </div>
+            <div class="tr">
+              <div class="td td-1 black">{{player2name}}</div>
+              <div class="td td-2">
+                <label>
+                  <radio value="2" checked='{{ischecked}}' />
+                </label>
+              </div>
+              <div class="td td-3">
+                <input name='player2_integral' value='{{chushi}}' type="number" class="input" />
+              </div>
+            </div>
+            <div class="tr">
+              <div class="td td-1 black">{{player3name}}</div>
+              <div class="td td-2">
+                <label>
+                  <radio value="3" checked='{{ischecked}}' />
+                </label>
+              </div>
+              <div class="td td-3">
+                <input name='player3_integral' value='{{chushi}}' type="number" class="input" />
+              </div>
+            </div>
+          </radio-group>
+        </div>
+        <div class="prompt">
+          提示：仅上传地主得分即可，其他三家自动计算。
+          <br /> 地主失分请勾选负，上传分数将自动变为负值。
+        </div>
+        <div class="prompt">
+          启用语音播报：
+          <switch checked='{{switch}}' name="switch" />
+        </div>
+      </div>
+      <div class="pop-footer">
+        <button formType='submit' class="btn btn-primary" id="btnsubmit">提交</button>
+      </div>
+    </div>
+  </form>
+  <div id="popshadow"></div>
+</div>

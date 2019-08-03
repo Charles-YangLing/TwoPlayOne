@@ -1,0 +1,13 @@
+<!--pages/team_history/team_history.wxml-->
+<div class="header row">
+  <div class="title">历史对局</div>
+  <div bindtap='Toadvice' class="advice">意见反馈</div>
+</div>
+
+<div class="history row">
+  <div wx:for="{{logs}}" class="item">
+    <view class="link" id='{{item.house_name}}' bindtap='to_team_show'>
+      <div wx:if="{{item.overstatus}}" class="status">[进行中]</div>时间：{{item.riqi}}房间号：{{item.house_name}}
+    </view>
+  </div>
+</div>

@@ -1,0 +1,158 @@
+/**app.wxss**/
+@charset "utf-8";
+/*框架*/
+body{margin: 0; padding: 0; background-color: #fff;}
+div{display: block; box-sizing: border-box;}
+.row{width: 100%; float: left; display: block;}
+.container{width: 100%; float: left; padding: 0 20px; box-sizing: border-box;}
+
+
+/*色彩*/
+.red{color: #c40000 !important;}
+.orange{color: #f70 !important;}
+.grey{color: #999 !important;}
+.black{color: #333 !important;}
+
+
+/*表格*/
+.table{width: 100%; float: left; font-size: 14px; text-align: center; line-height: 40px; color: #777; background-color: #fff;}
+.table .tr{width: 100%; float: left;}
+.table .tr .th{width: 25%; float: left; background-color: #c40000; color: #fff; border-right: 1px solid #a10000; font-weight: bold;}
+.table .tr .th:last-child{border-right: none !important;}
+.table .tr .th.user{background:#c40000 url(https://mpmininter.uicrm.net/img/user.png) right top no-repeat; background-size: 20px 20px;}
+.table .tr .td{width: 25%; float: left; color: #00b4ff; border-right: 1px solid #eee; border-bottom: 1px solid #eee;}
+.table .tr .td:last-child{border-right: none !important;}
+.table .tr.total{background-color: #fbb101; font-weight: bold;}
+.table .tr.total .td{color: #fff; border-right: 1px solid #eeae00; border-bottom: none !important;}
+.table .tr .td.landlord{background: url(https://mpmininter.uicrm.net/img/landlord.png) right top no-repeat; background-size: 8px 8px;}
+.table .tr .td.orange{font-weight: bold;}
+
+
+/*文字超出本行自动隐藏并显示省略号*/
+.int,.th,.td{display:block; overflow:hidden; white-space:nowrap;
+-webkit-text-overflow:ellipsis;
+-ms-text-overflow:ellipsis; 
+-o-text-overflow:ellipsis;
+text-overflow:ellipsis;
+}
+
+
+/*按钮*/
+.btn{display: block; font-size: 16px; line-height: 30px; text-align: center; padding: 5px; border-radius:5px; box-sizing: border-box; text-decoration: none;}
+.btn-primary{background:#c10000 !important; border:1px solid #c10000 !important; color:#fff !important;}
+.btn-success{background:#f28707 !important; border:1px solid #f28707 !important; color:#fff !important;}
+.btn-default{background: #fff !important; border: 1px solid #999 !important; color: #000 !important;}
+.btn-warning{background:#fff !important; border:1px solid #f28707 !important; color:#f28707 !important;}
+.btn-danger{background: #fff !important; border:1px solid #c10000 !important; color:#c10000 !important;}
+
+
+/*按钮组*/
+.form-group{width: 100%; float: left; padding: 10px 20px;}
+.form-group .box{width: 100%; float: left; display: block; padding: 5px 0;}
+.form-group .box .name{width: 100%; display: block; float: left; font-size: 14px; line-height: 20px; padding-bottom: 3px;}
+.form-group .box .input-box{width: 100%; display: block; float: left; padding: 5px 0;}
+.form-group .box input{display: block; width: 100%; float: left; height: 40px; border-radius: 5px; border: 1px solid #c40000; padding: 0 10px; box-sizing: border-box;}
+.form-group .box .btn{margin: 5px 0;}
+
+
+/*页头*/
+.header{padding: 5px 20px; box-shadow: 0 0 10px rgba(0,0,0,.3); position: fixed; top: 0; left: 0; z-index: 0; background-color: #fff;}
+.header .title{float: left; font-size: 16px; font-weight: bold; line-height: 40px; color: #333;}
+.header .advice{float: right; font-size: 12px; font-weight: bold; line-height: 40px; color: #333;}
+.header .link{float: right; display: block; line-height: 30px; font-size: 13px; text-decoration: none; color: #c40000; padding: 6px 10px 4px 0;}
+.header .link{background: url(https://mpmininter.uicrm.net/img/jt.png) right center no-repeat; background-size: 5px 10px;}
+.header .link .qrcode{display: inline-block; width: 18px; height: 18px; vertical-align: middle; margin: -3px 2px 0 2px;}
+
+
+/*三打一首页*/
+.section{position: fixed; width: 100%; height: 100%; left: 0; top: 0; background: url(https://mpmininter.uicrm.net/img/bg.jpg)center center no-repeat; background-size: cover;}
+.section{position: fixed; width: 100%; height: 100%; left: 0; top: 0; }
+.section image{display: block; width: 100%; height: auto;}
+.subject{width: 100%; position: absolute; z-index: 10; left: 0; top: 13%;}
+.btn-game{width: 46%; margin: 0 27%; position: absolute; z-index: 20; top: 67%;}
+.btn-game .btn{margin-bottom: 10px; display: block; width: 100%;}
+.outlink{width: 40%; position: absolute; z-index: 10; left: 30%; bottom: 3%;}
+
+
+/*创建房间*/
+.create{padding-top: 60px;}
+.create .item{width: 100%; float: left; display: block; padding: 10px 0;}
+.create .form-group{border-radius: 5px; background-color: #ffead4;}
+
+.prompt{padding: 0 20px; font-size: 12px; line-height: 28px; color: #777; width: 100%; float: left;}
+.prompt .btn{margin-bottom: 10px;}
+
+
+/*计分*/
+.scoring{padding: 50px 0 72px 0;}
+.scoring .form-group{position: fixed; left: 0; bottom: 0; padding:10px 15px; background-color: #fff; border-top: 1px solid #eee;}
+.scoring .form-group .box{width: 65%; padding: 0 5px;}
+.scoring .form-group .box:first-child{width: 35%;}
+.end{padding-top: 50px;}
+#popAddAcore .table .tr{position: relative;}
+#popAddAcore .table .tr .mask{position: absolute; width: 100%; z-index: 200; height: 40px; left: 0; top: 0; background-color: rgba(255,255,255,0.7);}
+
+
+/*弹窗*/
+.pop{display: none;} 
+.pop, #popshadow{position: fixed; z-index: 100; width: 100%; height: 100%; left: 0; top: 0;}
+#popshadow{background-color: rgba(0,0,0,0.6);}
+.pop .pop-content{position: absolute; z-index: 110; left: 50%; top: 50%; margin: -200px 0 0 -160px; width: 320px; height: 400px; background-color: #fff; padding:0 20px;}
+.pop .pop-content .pop-header{width: 100%; float: left; text-align: center; line-height: 40px; font-weight: bold; font-size: 16px; padding: 10px;}
+.pop .pop-content .pop-header #popclose{position: absolute; right: 15px; top: 15px; z-index: 120; width: 30px; height: 30px; background: url(https://mpmininter.uicrm.net/img/close.png); background-size: contain;}
+.pop .pop-content .pop-header #popclose{position: absolute; right: 15px; top: 15px; z-index: 120; width: 30px; height: 30px;}
+.pop .pop-content .pop-footer{width: 100%; padding: 10px 0; float: left;}
+.pop .pop-content .pop-body{width: 100%; float: left;}
+.pop .pop-content .pop-body .td{border-right: none !important; height: 41px;}
+.pop .pop-content .pop-body .td-1{width: 45%; text-align: left; padding: 0 15px;}
+.pop .pop-content .pop-body .td-2{width: 9%;}
+.pop .pop-content .pop-body .td-3{width: 45%; padding: 0 10px;}
+
+.pop .pop-content .pop-body .checkbox{width: 16px; height: 16px; margin: 12px auto 0 auto; padding: 0; display: block;}
+.pop .pop-content .pop-body .input{display: block; width: 100%; box-sizing: border-box; height: 30px; margin: 5px 0; border:1px solid #bbb; text-align: center;}
+.pop .pop-content .pop-body .prompt{padding: 10px 0; line-height: 20px;}
+
+
+/*邀请队友*/
+.share{padding-top: 20px;}
+.share .title{font-size: 20px; font-weight: bold; text-align: center; width: 100%; padding: 20px 0;}
+.share .qrcode{width: 200px; margin: 0 auto;}
+.share .qrcode image{display: block; width: 100%; height: auto;}
+.share .prompt{text-align: center; padding: 20px 0;}
+
+
+/*历史对局*/
+.history{padding: 55px 20px 20px 20px;}
+.history .item{width: 100%; float: left; border-bottom: 1px solid #ccc;}
+.history .item .link{display: block; text-decoration: none; color: #555; font-size: 13px; line-height: 20px; padding: 16px 30px 14px 0;}
+.history .item .link{background: url(https://mpmininter.uicrm.net/img/arrow.png) right center no-repeat; background-size: 15px 15px;}
+.history .item .status{color: #f70; display: inline;}
+
+
+/*加入房间*/
+.join{padding: 50px 0;}
+.join .item{width: 100%; float: left; display: block; padding: 10px 0;}
+.join .form-group{padding: 10px 40px;}
+.join .form-group .box{padding: 10px 0;}
+.join .scan{width: 100%; background-color: #eeae00;}
+.join .scan .link{display: block; color: #fff; text-decoration: none; font-size: 14px; line-height: 20px; padding: 15px 20px;}
+.join .scan .link .qrcode{display: block; background: url(https://mpmininter.uicrm.net/img/scan.png) right center no-repeat; background-size: 20px 20px;}
+
+
+/*绑定称呼*/
+.binding{padding-top: 50px;}
+.binding .content{font-size: 16px; line-height: 30px; padding:20px 40px 0 40px; font-weight: bold;}
+.binding .form-group{padding: 10px 40px;}
+.binding .form-group .name{padding-bottom: 10px;}
+.binding .form-group .box{padding: 10px 0;}
+.binding .form-group .item{border: 1px solid #ccc; border-bottom: none; width: 100%; float: left; line-height: 20px; font-size: 16px; padding: 10px 15px;}
+.binding .form-group .item:last-child{border-bottom: 1px solid #ccc;}
+.binding .form-group .item .left{width: 90%; float: left;}
+.binding .form-group .item .right{width: 10%; float: right;}
+.binding .form-group .item input{width: 20px; height: 20px; float: right; display: block; margin: 0;}
+.binding .form-group .item label{display: block;}
+
+/*意见列表*/
+.from-tijiao{margin: 0 0 10px 0;}
+.from-tijiao .box{margin: 0 0 1px 0; line-height: 40px;}
+.from-group .box input,.from-group .box select,.from-group .box textarea{height: 48px; width: 100%; border: none; outline:none; padding: 0; margin: 0; display: block;}

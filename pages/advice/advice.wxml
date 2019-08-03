@@ -1,0 +1,17 @@
+<!--pages/Advice/advice.wxml-->
+<div class="header row">
+  <div class="title">意见反馈</div>
+</div>
+<div class="history row">
+  <form catchsubmit="formSubmit">
+    <div class="row from-tijiao">
+      <div>
+        <textarea name="message" placeholder="写下您对斗地主计分的意见或建议："></textarea>
+      </div>
+    </div>
+    <div class="row btn-group">
+      <button form-type='submit' class="btn btn-primary">提交</button>
+    </div>
+    <div class="clearfix"></div>
+  </form>
+</div>

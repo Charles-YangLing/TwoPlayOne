@@ -1,0 +1,37 @@
+<!--pages/edit_team/edit_team.wxml-->
+<div class="header row">
+  <div class="title">创建房间</div>
+</div>
+
+<div class="create container">
+  <form catchsubmit="formSubmit">
+    <div class="item">
+      <div class="form-group">
+        <div class="box">
+          <div class="name">房主称呼</div>
+          <div class="input-box">
+            <input name="player1_name" type="text" placeholder="玩家1" />
+          </div>
+        </div>
+        <div class="box">
+          <div class="name">队友称呼</div>
+          <div class="input-box">
+            <input name="player2_name" type="text" placeholder="玩家2" />
+          </div>
+          <div class="input-box">
+            <input name="player3_name" type="text" placeholder="玩家3" />
+          </div>
+        </div>
+        <div class="box">
+          <button form-type='submit' class="btn btn-primary">创建房间</button>
+        </div>
+      </div>
+    </div>
+    </form>
+    <div class="item">
+      <div class="prompt">
+        <button bindtap='Toteam_list_option' class="btn btn-success">加入房间</button>
+        提示：已有队友创建好房间，请点击加入房间
+      </div>
+    </div>
+</div>
